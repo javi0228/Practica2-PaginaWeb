@@ -8,6 +8,7 @@
     <meta name="title" content="Práctica 2">
     <meta name="description" content="Práctica manual de JavaScript">
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Práctica 2</title>
     <!-- Icono de la pestaña -->
     <link rel="shortcut icon" href="Fotos/javascript_icon.jpg" />
@@ -21,24 +22,27 @@
 
 <body>
 
+
+
+    <header>
+        <nav class=menu>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbt"><i class="fas fa-bars"></i></i></label>
+
+            <a href="#" class="enlace_logo">
+                <img src="Fotos/logo.png" alt="logo" id="logo">
+                <p>Java Script Manual</p>
+            </a>
+
+            <ul>
+                <li><a href="#javascript">JavaScript</a></li>
+                <li><a href="#jquery">jQuery</a></li>
+                <li><a href="#angular">Angular JS</a></li>
+                <li><a href="#bootstrap">Bootstrap</a></li>
+                <li><a href="#next">Next.js</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav class=menu>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbt"><i class="fas fa-bars"></i></i></label>
-
-        <a href="#" class="enlace_logo">
-            <img src="Fotos/logo.png" alt="logo" id="logo">
-            <p>Java Script Manual</p>
-        </a>
-
-        <ul>
-            <li><a href="">JavaScript</a></li>
-            <li><a href="">Angular JS</a></li>
-            <li><a href="">Next.js</a></li>
-            <li><a href="">Bootstrap</a></li>
-            <li><a href="">jQuery</a></li>
-        </ul>
-    </nav>
 
     <aside>
         <h3>RELATIONED SITES</h3>
@@ -47,8 +51,13 @@
             <li><a href="https://www.w3schools.com/">W3SCHOOLS</a></li>
             <li> <a href="https://developer.mozilla.org/es/">DEVELOPER.MOZILLA</a> </li>
             <li> <a href="https://www.delftstack.com/">DELFSTACK</a> </li>
+            <li> <a href="https://www.tabnine.com/academy/javascript/javascript-how-to-
+                use-the-alert-method-in-javascript/?utm_term=&gclid=CjwKCAiAo4OQBhBBEiwA5KWu_56kU8xh5JLTrhv1xt_
+                K33bn56qogvrei-gM67OW3PI6EJLr-w2RChoCpCEQAvD_BwE">TABNINE</a> </li>
+            <li> <a href="https://www.anerbarrena.com/javascript-alert-confirm-prompt-js-5497/">ANERBARRA</a> </li>
         </ul>
     </aside>
+
 
     <section>
 
@@ -66,24 +75,99 @@
         <article>
 
             <h2>CONTENT</h2>
-            <p>In this site, we're going to deal with
-                <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascade Style Sheet">CSS 3</abbr>, wich are the most famous language in Web development world.
+            <p>In this site, we're going to deal with JavaScript , jQuery, next.js, Angular JS and Bootstrap, wich are the most famous language in Web development world.
             </p>
 
-            <h3>HTML 5</h3>
+            <h3 id="javascript">JavaScript</h3>
 
-            <p>About HTML, we're going to learn basic concepts, what HTML is useful to, what a label is, what kind of labels are and much more about this language
-            </p>
+            <p>Front-end developers use JavaScript (along with HTML and CSS) to create the parts of a web page that users see and interact with in their browsers.</p>
+            <p>Before JavaScript, web pages only served static content. JavaScript gave developers the ability to provide their users with a dynamic web experience, adding animations and other interactive elements. When you click a button on a website, and
+                a side panel opens or a modal slowly comes into view, that's JavaScript at work.</p>
+            <h3 id="jquery">jQuery</h3>
 
-            <h3>CSS 3</h3>
+            <p>JQuery is an open-source JavaScript library. It is lightweight and helps when we have to write less and do more.</p>
+            <p>jQuery is used to take a bunch of common tasks that require many lines of JavaScript code and wraps them into various methods. This method can be called with a single line of code. Thus making it easy to use JavaScript on your website. </p>
+            <p>jQuery is a framework built with JavaScript. It helps web developers to add extra functionalities to their websites. It is the most popular JavaScript library used to traverse and manipulate the HTML DOM tree. Also, it simplifies event handling,
+                CSS animation, and Ajax.</p>
+            <h3 id="angular">Angular JS</h3>
 
-            <p>About CSS3, we're going to learn basic concepts, for what can you use it, wich are the most used styles, indicators, how you can link it with your HTML files.
-            </p>
+            <p>AngularJS is a structural framework for dynamic web applications. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application components clearly and succinctly. Its data binding and dependency
+                injection eliminate much of the code you currently have to write. And it all happens within the browser, making it an ideal partner with any server technology.</p>
+
+            <h3 id="bootstrap">Bootstrap</h3>
+
+            <p>Bootstrap is the most popular CSS Framework for developing responsive and mobile-first websites.</p>
+            <p>Bootstrap is a giant collection of handy, reusable bits of code written in HTML, CSS, and JavaScript. It’s also a frontend development framework that enables developers and designers to quickly build fully responsive websites. Essentially,
+                Bootstrap saves you from writing lots of CSS code, giving you more time to spend on designing webpages.</p>
+
+            <h3 id="next">Next.js</h3>
+
+            <p>Next.js is a React framework for developing single page Javascript applications. The benefits of this framework are numerous, both for our clients’ applications as well as for our development team.</p>
+            <p>It lets you build server-side rendering and static web applications using React. It’s a great tool to build your next website. It has many great features and advantages, which can make Nextjs your first option for building your next web application.</p>
         </article>
 
 
 
     </section>
+
+    <form method="GET" name="registro" action="#" onsubmit="return pedidoRealizado();" id="formulario">
+
+        <h1>Registrarse</h1>
+
+        <input type="text" class="input_form" name="nombre" required><label for="" class="label_form">Nombre</label>
+        <input type="email" class="input_form" name="correo" required><label for="" class="label_form">Correo electrónico</label>
+        <input type="tel" class="input_form" name="telefono" required><label for="" class="label_form">Número de telefono</label>
+
+        <input type="radio" name="sexo" class="radio_sexo" id="hombre" value="hombre"><label for="hombre" class="label_radio">Hombre</label>
+        <input type="radio" name="sexo" class="radio_sexo" id="mujer" value="mujer"><label for="mujer" class="label_radio">Mujer</label>
+        <input type="submit" class="bt" onclick="pedidoRealizado();" name="Enviar" value="Confirmar">
+
+    </form>
+
+
+
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext ">1 / 4</div>
+            <img src="Fotos/javascript_slide.png " style="width:100% " class="foto ">
+            <div class="text ">JavaScript</div>
+        </div>
+
+        <div class="mySlides fade ">
+            <div class="numbertext ">2 / 4</div>
+            <img src="Fotos/next_slide.png " style="width:100% " class="foto ">
+            <div class="text ">Next.js</div>
+        </div>
+
+        <div class="mySlides fade ">
+            <div class="numbertext ">3 / 4</div>
+            <img src="Fotos/bootstrap_slide.png " style="width:100% " class="foto ">
+            <div class="text ">Bootstrap</div>
+        </div>
+
+        <div class="mySlides fade ">
+            <div class="numbertext ">4 / 4</div>
+            <img src="Fotos/angular_slide.png " style="width:100% " class="foto ">
+            <div class="text ">Angular JS</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev " onclick="plusSlides(-1) ">&#10094;</a>
+        <a class="next " onclick="plusSlides(1) ">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center ">
+        <span class="dot " onclick="currentSlide(1) "></span>
+        <span class="dot " onclick="currentSlide(2) "></span>
+        <span class="dot " onclick="currentSlide(3) "></span>
+        <span class="dot " onclick="currentSlide(4) "></span>
+    </div>
 
 
 
@@ -92,9 +176,11 @@
         <p>Francisco Javier Rodríguez Gómez</p>
 
         <h4>Redes sociales</h4>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
+        <a href="# ">Facebook</a>
+        <a href="# ">Instagram</a>
     </footer>
 </body>
+
+<script src="script.js "></script>
 
 </html>
